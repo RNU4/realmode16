@@ -58,7 +58,7 @@ read_input:
         je .delete_char  ; jump if newline
 
         cmp si, input_buffer_size-1 ; yeah overwriting memory is not good
-        jge .loop ;just keep going back until the idiot press enter. He should figure it out
+        jge .loop ;just keep going back
 
         mov [bx+si],al ; al = key_press_char
         inc si ; increase buffer write pos
