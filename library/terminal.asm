@@ -80,7 +80,7 @@ read_input:
     je .loop_end  ; jump if newline
     
     cmp si, input_buffer_size-1 ; yeah overwriting memory is not good
-    jge .loop ;just keep going back until the idiot press enter. He should figure it out
+    jge .loop ;just keep going back
     mov cx,[key_press_char]
     mov [bx+si],cx ; al = key_press_char
     inc si ; increase buffer length
